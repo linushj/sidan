@@ -23,18 +23,19 @@ nav {
 
 nav>div {
     font-family: helvetica;
-    font-size: large;
-    padding: 15px 25px;
+    font-size: 3vh;
+    padding: 25px 25px;
     background-color: rgba(250, 235, 215, 0.5);
     border-radius: 10px;
     text-align: center;
     border: 0.5px solid rgba(250, 235, 215, 0.5);
-    margin: 2px;
+    margin: 8vh 0.3vh;
 }
 
 nav>div:hover {
     background-color: rgba(173, 173, 173, 0.5);
     border: 0.5px solid white;
+    cursor: pointer;
 }
 
 body>div {
@@ -55,7 +56,7 @@ h1 {
 }
 
 header {
-    font-size: 30px;
+    font-size: 40px;
     margin-left: 50px;
     opacity: 0.9;
 }
@@ -67,19 +68,18 @@ div>h1 {
 .best {
     border: 1px solid white;
     border-radius: 20px;
-    margin-top: 30px;
     padding: 30px 0 30px 30px;
     background-color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 4vh;
 }
 
 .show_not_hover {
-    margin-left: 700px;
     display: inline-block;
     display: flex;
     height: 500px;
     width: 500px;
     transition: opacity 0.3s;
-    border-radius: 20px 20px 0 0;
+    border-radius: 3vh 3vh 0 0;
 }
 
 .show_not_hover:hover {
@@ -88,18 +88,20 @@ div>h1 {
 
 .show_hover {
     opacity: 0;
-    margin-left: 700px;
     display: inline-block;
     display: flex;
     height: 500px;
     width: 500px;
     transition: opacity 0.3s;
-    border-radius: 20px 20px 0 0;
+    border-radius: 3vh 3vh 0 0;
+    /* position: relative;
+    top: 500px; */
+    position: absolute;
+    z-index: 1;
 }
 
 .show_hover:hover {
     opacity: 1;
-    margin-left: 700px;
     display: inline-block;
     display: flex;
     height: 500px;
@@ -112,23 +114,101 @@ footer {
 }
 
 .song_list {
-    background-color: rgb(10, 10, 10);
     display: inline-block;
-    padding: 20px;
-    margin-left: 700px;
-    border-radius: 0 0 20px 20px;
+    margin-left: 49.5vw;
     margin-top: 1vh;
-}
-
-.album_data {
-    display: inline-block;
 }
 
 .song_list>div {
     display: inline-block;
+    background-color: rgb(17, 13, 10);
+    padding: 20px;
+    border-radius: 0 0 3vh 3vh;
+    width: 175px;
+    height: 250px;
+}
+
+.album_data {
+    display: inline-block;
+    position: relative;
+    top: -80vh;
 }
 
 .album_description {
     display: inline-block;
     max-width: 600px;
+}
+
+.cover {
+    display: inline-block;
+    /* top: -60vh; */
+    /* right: -110px; */
+    display: grid;
+    grid-template-columns: 500px;
+    grid-template-rows: 500px;
+    position: absolute;
+}
+
+main {
+    display: grid;
+}
+
+#scandinavian_leather {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.anecdotes {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr 1fr;
+    display: grid;
+    height: 35vh;
+    margin-right: 9vh;
+    gap: 0.7vh;
+}
+
+.anecdotes>li {
+    background-color: rgb(244, 185, 28);
+    color: rgb(218, 46, 113);
+    padding: 20px;
+
+    grid-row: 1 / span 2;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.two_wide {
+    grid-column: 5 / span 4;
+    border-radius: 2vh 2vh 2vh 0;
+}
+
+.top_right_90 {
+    border-radius: 10px 0 10px 10px;
+    grid-column: 1 / span 2;
+}
+
+.image_1 {
+    background-image: url('Hank-von-Hell-Egomania.jpg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 0 2vh 2vh 2vh;
+    text-align: center;
+    font-size: large;
+    grid-column: 9 / span 2;
+}
+
+.bottom_right_90 {
+    border-radius: 2vh 2vh 0 2vh;
+    grid-column: 11 / span 2;
+}
+
+.empty {
+    opacity: 0;
+    grid-column: 3 / span 2;
+}
+
+.album_data {
+    display: inline-block;
 }
