@@ -71,6 +71,10 @@ div>h1 {
     padding: 30px 0 30px 30px;
     background-color: rgba(0, 0, 0, 0.5);
     margin-bottom: 4vh;
+    /* 
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr); */
 }
 
 .show_not_hover {
@@ -115,8 +119,17 @@ footer {
 
 .song_list {
     display: inline-block;
-    margin-left: 49.5vw;
     margin-top: 1vh;
+    width: 500px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    border: 1px solid lightcoral;
+
+    position: relative;
+    left: 48vw;
+    bottom: 42vh;
 }
 
 .song_list>div {
@@ -124,14 +137,21 @@ footer {
     background-color: rgb(17, 13, 10);
     padding: 20px;
     border-radius: 0 0 3vh 3vh;
-    width: 175px;
+    width: 200px;
     height: 250px;
+
+    border: 1px solid lightcoral;
 }
+
+/* .song_list:first-child {
+    border-radius: 0 0 0 3vh;
+} */
 
 .album_data {
     display: inline-block;
     position: relative;
-    top: -80vh;
+
+    border: 1px solid lightcoral;
 }
 
 .album_description {
@@ -146,7 +166,12 @@ footer {
     display: grid;
     grid-template-columns: 500px;
     grid-template-rows: 500px;
-    position: absolute;
+    width: 500px;
+
+    position: relative;
+    left: 48vw;
+    bottom: 42.3vh;
+    border: 1px solid lightcoral;
 }
 
 main {
